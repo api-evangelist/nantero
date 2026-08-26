@@ -1,23 +1,79 @@
 aid: nantero
 name: Nantero
-description: 'Nantero is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Nantero, Inc. was a Woburn, Massachusetts nanotechnology company founded in 2001 by Greg
+  Schmergel, Thomas Rueckes and Brent Segal to commercialize NRAM, a high-density non-volatile
+  random-access memory that stores bits in the physical position of carbon nanotubes deposited
+  on a conventional CMOS substrate. Its business was semiconductor intellectual-property
+  licensing, not software: it raised more than $40 million through a Schlumberger-backed Series D
+  in 2013 and a further ~$31.5 million Series E in 2015 from investors including Charles River
+  Ventures and Draper Fisher Jurvetson, licensed NRAM to Fujitsu Semiconductor in 2016, granted
+  Lockheed Martin an exclusive government-applications license in 2008, and collaborated with imec
+  and Nano-C, but shipped its technology to foundry partners as process IP and test wafers rather
+  than as any product a developer could call. Nantero ceased operations in mid-to-late 2024; its
+  assets were partially acquired by Micron Technology and the remainder sold at auction. It never
+  published a developer portal, API, SDK, or machine-readable specification of any kind, and the
+  nantero.com domain has since been re-registered by an unrelated party. This profile is retained
+  as a historical record; there is no API surface to enrich.
 url: https://raw.githubusercontent.com/api-evangelist/nantero/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
-x-tier-reason: harvest
-specificationVersion: '0.20'
+x-tier-reason: defunct-no-api-surface
+x-status: defunct
+x-shutdown-date: '2024'
+x-acquired-by: micron
+x-acquired-note: >-
+  Partial asset acquisition by Micron Technology during the 2024 wind-down; the remaining
+  equipment and assets were sold at auction by August 2024. Not a whole-company acquisition.
+x-domain-status: reassigned
+x-domain-note: >-
+  nantero.com is no longer controlled by Nantero. WHOIS shows a GoDaddy / Domains By Proxy
+  registration updated 2025-06-10, and the host now 301s to unrelated third-party sites and
+  serves a single 719,496-byte Thai-language online-gambling SEO page as a catch-all 200 for
+  every path, including paths that cannot exist. It is deliberately NOT wired as a Website
+  pointer. The successor-branded nanterotech.com is NXDOMAIN. See
+  well-known/nantero-well-known.yml for the full probe record.
+specificationVersion: '0.23'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Defunct
+- Semiconductors
+- Memory
+- Nanotechnology
+- Hardware
+- Intellectual Property
+- Carbon Nanotubes
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-common:
-- type: Website
-  url: https://www.nasdaqprivatemarket.com/
+common: []
+x-enrichment:
+  date: '2026-08-26'
+  status: nochange
+  artifacts_added: 1
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: defunct
+  detail: >-
+    Nantero ceased operations in mid-to-late 2024 (assets partly to Micron, remainder
+    auctioned) and nantero.com has since been re-registered by an unrelated party that
+    answers HTTP 200 with the same 719,496-byte Thai gambling page for every path, so its
+    /.well-known/ and /openapi.json 200s are a catch-all rather than any surface Nantero
+    ever served.
+  evidence:
+    - url: https://nantero.com/
+      status: 301
+    - url: https://nantero.com/.well-known/agent-card.json
+      status: 200
+    - url: https://nanterotech.com/
+      status: 0
+    - url: http://web.archive.org/web/20240116172446/https://www.nantero.com/
+      status: 200
+  checked: '2026-08-26'

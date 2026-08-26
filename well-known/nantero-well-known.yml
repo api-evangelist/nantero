@@ -1,0 +1,95 @@
+generated: '2026-08-26'
+method: probed
+source: https://nantero.com/
+note: >-
+  NEGATIVE RESULT — recorded so a later round is not fooled by the HTTP 200s below.
+  Nantero Inc. ceased operations in mid-to-late 2024 and no longer controls nantero.com.
+  The domain was re-registered (GoDaddy / Domains By Proxy, WHOIS Updated Date 2025-06-10)
+  and now serves a Thai-language online-gambling SEO site that answers HTTP 200 with an
+  IDENTICAL 719,496-byte HTML body for EVERY path, including a random control path that
+  cannot exist. Not one of these 200s is a document. hit_count is 0, nothing was saved,
+  and NO WellKnown / SecurityTxt / AgentCard pointer is emitted from this probe.
+  nanterotech.com, the successor-branded site that appears in search results, is NXDOMAIN.
+hit_count: 0
+soft_404_control:
+  path: /zzz-api-evangelist-control-<random>
+  status: 200
+  bytes: 719496
+  note: >-
+    A path that cannot exist returns the same 200 and the same byte count as every
+    /.well-known/ path below. The host is a catch-all; a 200 here is not evidence of a
+    served document.
+hosts:
+  - host: https://nantero.com
+    ownership: >-
+      NOT CONTROLLED BY NANTERO INC. Re-registered after the company wound down;
+      body is an unrelated Thai gambling site (title
+      "สล็อตเว็บตรง API แท้ 100% ฝากถอนออโต้ รองรับ สล็อตวอเลทเว็บตรง").
+      Deliberately not wired as a Website pointer.
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: null
+        note: catch-all HTML, 719496 bytes — not a document
+      - path: /.well-known/openid-configuration
+        status: 200
+        file: null
+        note: catch-all HTML, 719496 bytes — not a document
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: null
+        note: catch-all HTML, 719496 bytes — not a document
+      - path: /.well-known/api-catalog
+        status: 200
+        file: null
+        note: catch-all HTML, 719496 bytes — not a document
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        file: null
+        note: catch-all HTML, 719496 bytes — not a document
+      - path: /.well-known/agent-card.json
+        status: 200
+        file: null
+        note: catch-all HTML, 719496 bytes — not an AgentCard; a2a/ intentionally NOT written
+      - path: /.well-known/agent.json
+        status: 200
+        file: null
+        note: catch-all HTML, 719496 bytes — not an AgentCard; a2a/ intentionally NOT written
+  - host: https://nanterotech.com
+    ownership: >-
+      Successor-branded "Nantero American Memory" site referenced by search engines;
+      the domain does not resolve (NXDOMAIN) as of 2026-08-26.
+    documents:
+      - path: /.well-known/security.txt
+        status: 0
+        file: null
+        note: DNS NXDOMAIN — host does not resolve
+contract_discovery:
+  note: >-
+    STEP 0b run in full against the only resolving host. Every candidate returned the same
+    catch-all HTML shell; none parsed as OpenAPI/Swagger/GraphQL/MCP.
+  probed:
+    - { url: 'https://nantero.com/openapi.json', status: 200, result: html-catch-all }
+    - { url: 'https://nantero.com/openapi.yaml', status: 200, result: html-catch-all }
+    - { url: 'https://nantero.com/swagger.json', status: 200, result: html-catch-all }
+    - { url: 'https://nantero.com/v1/openapi.json', status: 200, result: html-catch-all }
+    - { url: 'https://nantero.com/api-docs', status: 200, result: html-catch-all }
+    - { url: 'https://nantero.com/docs', status: 200, result: html-catch-all }
+    - { url: 'https://nantero.com/redoc', status: 200, result: html-catch-all }
+    - { url: 'https://nantero.com/graphql', status: 200, result: html-catch-all }
+    - { url: 'https://nantero.com/llms.txt', status: 200, result: html-catch-all }
+    - { url: 'https://api.nantero.com/', status: 0, result: nxdomain }
+    - { url: 'https://developer.nantero.com/', status: 0, result: nxdomain }
+    - { url: 'https://docs.nantero.com/', status: 0, result: nxdomain }
+    - { url: 'https://nanterotech.com/', status: 0, result: nxdomain }
+  registries:
+    - { url: 'https://registry.npmjs.org/nantero', status: 404 }
+    - { url: 'https://pypi.org/pypi/nantero/json', status: 404 }
+  historical:
+    url: http://web.archive.org/web/20240116172446/https://www.nantero.com/
+    status: 200
+    finding: >-
+      The last live capture of the real company site (2024-01-16) is a WordPress marketing
+      site — About Us, Technology, Markets, Partnerships, Newsroom, Jobs. Zero occurrences
+      of "developer", "API reference", "OpenAPI", "Swagger", "SDK" or "documentation".
+      Nantero never ran a developer program; it licensed semiconductor IP to foundries.
