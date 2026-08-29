@@ -34,6 +34,17 @@ x-domain-note: >-
   every path, including paths that cannot exist. It is deliberately NOT wired as a Website
   pointer. The successor-branded nanterotech.com is NXDOMAIN. See
   well-known/nantero-well-known.yml for the full probe record.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 specificationVersion: '0.23'
 created: '2026-08-26'
 modified: '2026-08-26'
