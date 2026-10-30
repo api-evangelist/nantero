@@ -64,5 +64,28 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Nantero is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+> **No longer operating.** This company or product has shut down, been discontinued, or been deprecated. This profile is kept as a historical record and is not maintained or rated.
+
+Nantero, Inc. was a Woburn, Massachusetts nanotechnology company founded in 2001 by Greg Schmergel, Thomas Rueckes and Brent Segal to commercialize NRAM, a high-density non-volatile random-access memory that stores bits in the physical position of carbon nanotubes deposited on a conventional CMOS substrate. Its business was semiconductor intellectual-property licensing, not software: it raised more than $40 million through a Schlumberger-backed Series D in 2013 and a further ~$31.5 million Series E in 2015 from investors including Charles River Ventures and Draper Fisher Jurvetson, licensed NRAM to Fujitsu Semiconductor in 2016, granted Lockheed Martin an exclusive government-applications license in 2008, and collaborated with imec and Nano-C, but shipped its technology to foundry partners as process IP and test wafers rather than as any product a developer could call. Nantero ceased operations in mid-to-late 2024; its assets were partially acquired by Micron Technology and the remainder sold at auction. It never published a developer portal, API, SDK, or machine-readable specification of any kind, and the nantero.com domain has since been re-registered by an unrelated party. This profile is retained as a historical record; there is no API surface to enrich.
+
+**Areas:** Company · Defunct · Semiconductors · Memory · Nanotechnology · Hardware · Intellectual Property · Carbon Nanotubes
+
+## Nantero on APIs.io (historical record)
+
+Everything profiled for Nantero is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/nantero/](https://apis.io/providers/nantero/)** — or go straight to one of the APIs or properties below.
+
+## API Evangelist rating
+
+**Not rated** — this company is recorded as no longer operating, so no score is published. If it is in fact operating, say so on this repository and it will be re-profiled.
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Nantero: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/nantero/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
